@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
@@ -43,6 +44,13 @@ class PostController extends Controller
             ->latest('id')
             ->paginate(6);
         return view('posts.category', compact('posts', 'category'));
+    }
+
+    public function tag(Tag $tag)
+    {
+        $posts =  $tag->posts()->where('status', 2)->latest('id')->paginate(4);
+
+        return view('posts.tag', compact('posts', 'tag'));
     }
 
     public function edit($id)
