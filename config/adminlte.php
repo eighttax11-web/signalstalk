@@ -242,49 +242,29 @@ return [
         ['header' => 'Administrator'],
         [
             'text' => 'profile',
-            'url'  => 'admin/settings',
+            'route'  => 'profile.show',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'route'  => 'profile.show',
             'icon' => 'fas fa-fw fa-lock',
         ],
+        ['header' => 'Blog'],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'posts',
+            'icon'    => 'fas fa-clipboard-list',
+            'active' => ['admin/posts*'],
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Posts list',
+                    'route'  => 'admin.posts.index',
+                    'icon' => 'fas fa-fw fa-clipboard'
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Create a new post',
+                    'route'  => 'admin.posts.create',
+                    'icon' => 'fas fa-fw fa-file'
                 ],
             ],
         ],
@@ -436,5 +416,5 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/9.-Other-Configuration
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];

@@ -19,6 +19,6 @@ class UserSeeder extends Seeder
             'email' => '20183l301008@utcv.edu.mx',
             'password' => bcrypt('11012005qw')
         ]);
-        User::factory(99)->create();
+        User::factory(9)->create();
     }
 }
