@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
             'name' => 'Cristian López Ramirez',
             'email' => '20183l301008@utcv.edu.mx',
             'password' => bcrypt('11012005qw')
-        ]);
+        ])->assignRole('Admin');
         User::factory(9)->create();
     }
 }

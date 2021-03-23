@@ -226,7 +226,7 @@ return [
     'menu' => [
         [
             'text' => 'search',
-            'search' => true,
+            'search' => false,
             'topnav' => true,
         ],
         [
@@ -235,9 +235,10 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'Dashboard',
-            'route'       => 'admin.home',
-            'icon'        => 'fas fa-tachometer-alt fa-fw',
+            'text' => 'Users',
+            'route'  => 'admin.users.index',
+            'icon' => 'fas fa-users fa-fw',
+            'active' => ['admin/users*']
         ],
         ['header' => 'Administrator'],
         [
@@ -252,21 +253,10 @@ return [
         ],
         ['header' => 'Blog'],
         [
-            'text'    => 'posts',
-            'icon'    => 'fas fa-clipboard-list',
-            'active' => ['admin/posts*'],
-            'submenu' => [
-                [
-                    'text' => 'Posts list',
-                    'route'  => 'admin.posts.index',
-                    'icon' => 'fas fa-fw fa-clipboard'
-                ],
-                [
-                    'text' => 'Create a new post',
-                    'route'  => 'admin.posts.create',
-                    'icon' => 'fas fa-fw fa-file'
-                ],
-            ],
+            'text' => 'Posts',
+            'route'  => 'admin.posts.index',
+            'icon' => 'fas fa-fw fa-file',
+            'active' => ['admin/posts*']
         ],
         [
             'text' => 'Categories',
