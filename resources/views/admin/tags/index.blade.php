@@ -16,9 +16,11 @@
         </div>
     @endif
     <div class="card">
+        @can('admin.tags.create')
         <div class="card-header">
             <a href="{{ route('admin.tags.create') }}" class="btn btn-success">Create tag</a>
         </div>
+        @endcan
         <div class="card-body">
             <table class="table table-striped">
                 <thead>
@@ -34,9 +36,12 @@
                             <td>{{ $tag->id }}</td>
                             <td>{{ $tag->name }}</td>
                             <td width="10px">
+                                @can('admin.tags.edit')
                                 <a class="btn btn-primary btn-sm" href="{{ route('admin.tags.edit', $tag) }}">Edit</a>
+                                @endcan
                             </td>
                             <td width="10px">
+                                @can('admin.tags.destroy')
                                 <form action="{{ route('admin.tags.destroy', $tag) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -45,6 +50,7 @@
                                         Delete
                                     </button>
                                 </form>
+                                @endcan
                             </td>
                         </tr>
                     @endforeach

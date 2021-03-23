@@ -238,9 +238,9 @@ return [
             'text' => 'Users',
             'route'  => 'admin.users.index',
             'icon' => 'fas fa-users fa-fw',
-            'active' => ['admin/users*']
+            'active' => ['admin/users*'],
+            'can' => 'admin.users.index'
         ],
-        ['header' => 'Administrator'],
         [
             'text' => 'profile',
             'route'  => 'profile.show',
@@ -251,24 +251,26 @@ return [
             'route'  => 'profile.show',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        ['header' => 'Blog'],
         [
             'text' => 'Posts',
             'route'  => 'admin.posts.index',
             'icon' => 'fas fa-fw fa-file',
-            'active' => ['admin/posts*']
+            'active' => ['admin/posts*'],
+            'can' => 'admin.posts.index'
         ],
         [
             'text' => 'Categories',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-fw fa-buffer',
-            'active' => ['admin/categories*']
+            'active' => ['admin/categories*'],
+            'can' => 'admin.categories.index'
         ],
         [
             'text' => 'Tags',
             'route'  => 'admin.tags.index',
             'icon' => 'far fa-fw fa-bookmark',
-            'active' => ['admin/tags*']
+            'active' => ['admin/tags*'],
+            'can' => 'admin.tags.index'
         ],
         ['header' => 'labels'],
         [
