@@ -36,7 +36,7 @@ class CategoryController extends Controller
 
         $category = Category::create($request->all());
 
-        return redirect()->route('admin.categories.edit', $category)->with('info', 'Category successfully created');
+        return redirect()->route('admin.categories.edit', $category)->with('info', 'La categoría fue creada con éxito');
     }
 
     public function show(Category $category)
@@ -58,13 +58,13 @@ class CategoryController extends Controller
 
         $category->update($request->all());
 
-        return redirect()->route('admin.categories.edit', $category)->with('info', 'Category successfully updated');
+        return redirect()->route('admin.categories.edit', $category)->with('info', 'La categoría fue actualizada con éxito');
     }
 
     public function destroy(Category $category)
     {
         $category->delete();
 
-        return redirect()->route('admin.categories.index')->with('info', 'Category successfully deleted');
+        return redirect()->route('admin.categories.index')->with('info', 'La categoría fue borrada con éxito');
     }
 }

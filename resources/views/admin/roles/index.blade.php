@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Roles')
 
 @section('content_header')
-    <h1>Rol list</h1>
+    <h1>Lista de roles</h1>
 @stop
 
 @section('content')
@@ -17,14 +17,14 @@
     @endif
     <div class="card">
         <div class="card-header">
-            <a href="{{ route('admin.roles.create') }}" class="btn btn-success">Create rol</a>
+            <a href="{{ route('admin.roles.create') }}" class="btn btn-success">Crear un nuevo rol</a>
         </div>
         <div class="card-body">
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Role</th>
+                        <th>Nombre del rol</th>
                         <th colspan="2"></th>
                     </tr>
                 </thead>
@@ -34,13 +34,13 @@
                             <td>{{ $rol->id }}</td>
                             <td>{{ $rol->name }}</td>
                             <td width="10px">
-                                <a href="{{ route('admin.roles.edit', $rol) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ route('admin.roles.edit', $rol) }}" class="btn btn-primary">Editar</a>
                             </td>
                             <td width="10px">
                                 <form action="{{ route('admin.roles.destroy', $rol) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    <button type="submit" class="btn btn-danger">Borrar</button>
                                 </form>
                             </td>
                         </tr>

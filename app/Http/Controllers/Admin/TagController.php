@@ -17,13 +17,13 @@ class TagController extends Controller
     }
 
     public $colors = [
-        'red' => 'Red color',
-        'yellow' => 'Yellow color',
-        'green' => 'Green color',
-        'blue' => 'Blue color',
-        'indigo' => 'Indigo color',
-        'purple' => 'Purple color',
-        'pink' => 'Pink color'
+        'red' => 'Rojo',
+        'yellow' => 'Amarillo',
+        'green' => 'Verde',
+        'blue' => 'Azul',
+        'indigo' => 'Indigo',
+        'purple' => 'Morado',
+        'pink' => 'Rosa'
     ];
 
     public function index()
@@ -49,7 +49,7 @@ class TagController extends Controller
 
         $tag = Tag::create($request->all());
 
-        return redirect()->route('admin.tags.edit', compact('tag'))->with('info', 'Tag successfully created');
+        return redirect()->route('admin.tags.edit', compact('tag'))->with('info', 'La etiqueta fue creada con éxito');
     }
 
     public function show(Tag $tag)
@@ -73,13 +73,13 @@ class TagController extends Controller
 
         $tag->update($request->all());
 
-        return redirect()->route('admin.tags.edit', compact('tag'))->with('info', 'Tag successfully updated');
+        return redirect()->route('admin.tags.edit', compact('tag'))->with('info', 'La etiqueta fue actualizada con éxito');
     }
 
     public function destroy(Tag $tag)
     {
         $tag->delete();
 
-        return redirect()->route('admin.tags.index')->with('info', 'Tag successfully deleted');
+        return redirect()->route('admin.tags.index')->with('info', 'La etiqueta fue borrada con éxito');
     }
 }

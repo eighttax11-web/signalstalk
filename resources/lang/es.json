@@ -77,5 +77,6 @@
     "Email" : "Correo electrónico",
     "Already registered?" : "¿Ya está registrado?",
     "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one." : "¿Ha olvidado su contraseña? Sólo tienes que indicarnos tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña.",
-    "Email Password Reset Link" : "Enviar enlace"
+    "Email Password Reset Link" : "Enviar enlace",
+    "Welcome to this beautiful admin panel." : "Bienvenido a su panel de control"
 }

@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Etiquetas')
 
 @section('content_header')
-    <h1>Create a new tag</h1>
+    <h1>Crear una nueva etiqueta</h1>
 @stop
 
 @section('content')
@@ -12,7 +12,7 @@
             {!! Form::open(['route' => 'admin.tags.store']) !!}
 
                 @include('admin.tags.partials.form')
-                {!! Form::submit('Create tag', ['class' => 'btn btn-primary']) !!}
+                {!! Form::submit('Crear etiqueta', ['class' => 'btn btn-primary']) !!}
 
             {!! Form::close() !!}
         </div>

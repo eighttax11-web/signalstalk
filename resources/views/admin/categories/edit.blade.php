@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Categorías')
 
 @section('content_header')
-    <h1>Edit category</h1>
+    <h1>Editar una categoría</h1>
 @stop
 
 @section('content')
@@ -21,8 +21,8 @@
         <div class="card-body">
             {!! Form::model($category, ['route' => ['admin.categories.update', $category], 'method' => 'PUT']) !!}
             <div class="form-group">
-                {!! Form::label('name', 'Name') !!}
-                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Enter the category name']) !!}
+                {!! Form::label('name', 'Nombre: ') !!}
+                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Escriba el nombre de la categoría']) !!}
 
                 @error('name')
                 <div class="alert alert-danger alert-dismissible fade show mt-4" role="alert">
@@ -34,8 +34,8 @@
                 @enderror
             </div>
             <div class="form-group">
-                {!! Form::label('slug', 'Slug') !!}
-                {!! Form::text('slug', null, ['class' => 'form-control', 'placeholder' => 'Enter the category slug', 'readonly']) !!}
+                {!! Form::label('slug', 'Slug: ') !!}
+                {!! Form::text('slug', null, ['class' => 'form-control', 'placeholder' => 'Escriba el slug de la categoría ', 'readonly']) !!}
 
                 @error('slug')
                 <div class="alert alert-danger alert-dismissible fade show mt-4" role="alert">
@@ -46,7 +46,7 @@
                 </div>
                 @enderror
             </div>
-            {!! Form::submit('Update category', ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit('Editar categoría', ['class' => 'btn btn-primary']) !!}
             {!! Form::close() !!}
         </div>
     </div>

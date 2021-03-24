@@ -39,7 +39,7 @@ class PostController extends Controller
             $post->tags()->attach($request->tags);
         }
 
-        return redirect()->route('admin.posts.edit', $post);
+        return redirect()->route('admin.posts.edit', $post)->with('info', 'La publicación fue creada con éxito');
     }
 
     public function show(Post $post)
@@ -80,7 +80,7 @@ class PostController extends Controller
             $post->tags()->sync($request->tags);
         }
 
-        return redirect()->route('admin.posts.edit', $post)->with('info', 'Post update successfully');
+        return redirect()->route('admin.posts.edit', $post)->with('info', 'La publicación fue actualizada con éxito');
     }
 
     public function destroy(Post $post)
@@ -88,6 +88,6 @@ class PostController extends Controller
         $this->authorize('author', $post);
         $post->delete();
 
-        return redirect()->route('admin.posts.index')->with('info', 'Post delete successfully');
+        return redirect()->route('admin.posts.index')->with('info', 'La publicación fue borrada con éxito');
     }
 }

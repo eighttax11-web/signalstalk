@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Etiquetas')
 
 @section('content_header')
-    <h1>Tags list</h1>
+    <h1>Lista de etiquetas</h1>
 @stop
 
 @section('content')
@@ -18,7 +18,7 @@
     <div class="card">
         @can('admin.tags.create')
         <div class="card-header">
-            <a href="{{ route('admin.tags.create') }}" class="btn btn-success">Create tag</a>
+            <a href="{{ route('admin.tags.create') }}" class="btn btn-success">Crear una nueva etiqueta</a>
         </div>
         @endcan
         <div class="card-body">
@@ -26,7 +26,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
+                        <th>Nombre</th>
                         <th colspan="2"></th>
                     </tr>
                 </thead>
@@ -37,7 +37,7 @@
                             <td>{{ $tag->name }}</td>
                             <td width="10px">
                                 @can('admin.tags.edit')
-                                <a class="btn btn-primary btn-sm" href="{{ route('admin.tags.edit', $tag) }}">Edit</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('admin.tags.edit', $tag) }}">Editar</a>
                                 @endcan
                             </td>
                             <td width="10px">
@@ -47,7 +47,7 @@
                                     @method('DELETE')
 
                                     <button class="btn btn-danger btn-sm" type="submit">
-                                        Delete
+                                        Borrar
                                     </button>
                                 </form>
                                 @endcan

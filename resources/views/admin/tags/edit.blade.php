@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Etiquetas')
 
 @section('content_header')
-    <h1>Edit tag</h1>
+    <h1>Editar una etiqueta</h1>
 @stop
 
 @section('content')
@@ -20,7 +20,7 @@
             {!! Form::model($tag, ['route' => ['admin.tags.update', $tag], 'method' => 'PUT']) !!}
 
                 @include('admin.tags.partials.form')
-                {!! Form::submit('Update tag', ['class' => 'btn btn-primary']) !!}
+                {!! Form::submit('Editar etiqueta', ['class' => 'btn btn-primary']) !!}
 
             {!! Form::close() !!}
         </div>

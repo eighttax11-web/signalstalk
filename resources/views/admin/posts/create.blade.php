@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Publicaciones')
 
 @section('content_header')
-    <h1>Create a new post</h1>
+    <h1>Crear nueva publicación</h1>
 @stop
 
 @section('content')
@@ -13,7 +13,7 @@
 
             @include('admin.posts.partials.form')
 
-            {!! Form::submit('Create post', ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit('Crear publicación ', ['class' => 'btn btn-primary']) !!}
             {!! Form::close() !!}
         </div>
     </div>

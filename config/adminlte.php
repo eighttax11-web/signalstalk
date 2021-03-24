@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>SignalsTalk</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -187,7 +187,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => '/',
+    'dashboard_url' => '/blog',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -230,12 +230,7 @@ return [
             'topnav' => true,
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text' => 'Users',
+            'text' => 'Usuarios',
             'route'  => 'admin.users.index',
             'icon' => 'fas fa-users fa-fw',
             'active' => ['admin/users*'],
@@ -248,31 +243,32 @@ return [
             'active' => ['admin/roles*'],
         ],
         [
-            'text' => 'profile',
+            'text' => 'Perfil',
             'route'  => 'profile.show',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Cambiar contraseña',
             'route'  => 'profile.show',
             'icon' => 'fas fa-fw fa-lock',
         ],
+        ['header' => 'Blog'],
         [
-            'text' => 'Posts',
+            'text' => 'Publicaciones',
             'route'  => 'admin.posts.index',
             'icon' => 'fas fa-fw fa-file',
             'active' => ['admin/posts*'],
             'can' => 'admin.posts.index'
         ],
         [
-            'text' => 'Categories',
+            'text' => 'Categorías',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-fw fa-buffer',
             'active' => ['admin/categories*'],
             'can' => 'admin.categories.index'
         ],
         [
-            'text' => 'Tags',
+            'text' => 'Etiquetas',
             'route'  => 'admin.tags.index',
             'icon' => 'far fa-fw fa-bookmark',
             'active' => ['admin/tags*'],

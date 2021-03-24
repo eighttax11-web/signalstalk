@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Publicaciones')
 
 @section('content_header')
-    <a href="{{ route('admin.posts.create') }}" class="btn btn-success float-right">Create a new post</a>
-    <h1>Posts list</h1>
+    <a href="{{ route('admin.posts.create') }}" class="btn btn-success float-right">Crear nueva publicación</a>
+    <h1>Lista de publicaciones</h1>
 @stop
 
 @section('content')

@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Categorías')
 
 @section('content_header')
-    <h1>Category list</h1>
+    <h1>Lista de categorías</h1>
 @stop
 
 @section('content')
@@ -20,7 +20,7 @@
     <div class="card">
         @can('admin.categories.create')
         <div class="card-header">
-            <a href="{{ route('admin.categories.create') }}" class="btn btn-success">Create category</a>
+            <a href="{{ route('admin.categories.create') }}" class="btn btn-success">Crear una nueva categoría</a>
         </div>
         @endcan
         <div class="card-body">
@@ -28,7 +28,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
+                        <th>Nombre</th>
                         <th colspan="2"></th>
                     </tr>
                 </thead>
@@ -39,7 +39,7 @@
                             <td>{{ $category->name }}</td>
                             <td width="10px">
                                 @can('admin.categories.edit')
-                                <a href="{{ route('admin.categories.edit', $category) }}" class="btn btn-primary btn-sm">Edit</a>
+                                <a href="{{ route('admin.categories.edit', $category) }}" class="btn btn-primary">Editar</a>
                                 @endcan
                             </td>
                             <td width="10px">
@@ -47,7 +47,7 @@
                                 <form action="{{ route('admin.categories.destroy', $category) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    <button type="submit" class="btn btn-danger">Borrar</button>
                                 </form>
                                 @endcan
                             </td>

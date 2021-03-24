@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Roles')
 
 @section('content_header')
-    <h1>Edit role</h1>
+    <h1>Editar un rol</h1>
 @stop
 
 @section('content')
@@ -21,7 +21,7 @@
 
                 @include('admin.roles.partials.form')
 
-            {!! Form::submit('Editar rol', ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit('Editar rol', ['class' => 'btn btn-primary mt-4']) !!}
             {!! Form::close() !!}
         </div>
     </div>
