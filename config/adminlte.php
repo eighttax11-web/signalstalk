@@ -241,6 +241,7 @@ return [
             'route'  => 'admin.roles.index',
             'icon' => 'fas fa-users-cog fa-fw',
             'active' => ['admin/roles*'],
+            'can' => 'admin.roles.index'
         ],
         [
             'text' => 'Perfil',
