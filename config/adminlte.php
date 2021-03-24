@@ -242,6 +242,12 @@ return [
             'can' => 'admin.users.index'
         ],
         [
+            'text' => 'Roles',
+            'route'  => 'admin.roles.index',
+            'icon' => 'fas fa-users-cog fa-fw',
+            'active' => ['admin/roles*'],
+        ],
+        [
             'text' => 'profile',
             'route'  => 'profile.show',
             'icon' => 'fas fa-fw fa-user',
