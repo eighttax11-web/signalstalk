@@ -255,7 +255,7 @@ return [
         ],
         ['header' => 'Blog'],
         [
-            'text' => 'Publicaciones',
+            'text' => 'Mis publicaciones',
             'route'  => 'admin.posts.index',
             'icon' => 'fas fa-fw fa-file',
             'active' => ['admin/posts*'],
