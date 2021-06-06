@@ -13,7 +13,7 @@ Route::resource('categories', CategoryController::class)->names('admin.categorie
 Route::resource('roles', RoleController::class)->names('admin.roles');
 Route::resource('tags', TagController::class)->names('admin.tags');
 Route::resource('posts', PostController::class)->names('admin.posts');
-Route::resource('users', UserController::class)->only(['index', 'edit', 'update'])->names('admin.users');
+Route::resource('users', UserController::class)->only(['index', 'edit', 'update', 'destroy'])->names('admin.users');
 
 
 

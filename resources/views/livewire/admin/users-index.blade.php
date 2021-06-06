@@ -23,6 +23,13 @@
                             <td width="10px">
                                 <a class="btn btn-primary" href="{{ route('admin.users.edit', $user) }}">Editar</a>
                             </td>
+                            <td width="10px">
+                            <form action="{{ route('admin.users.destroy', $user) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger" type="submit">Borrar</button>
+                            </form>
+                        </td>
                         </tr>
                     @endforeach
                     </tbody>
