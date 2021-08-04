@@ -12,7 +12,7 @@ class UserController extends Controller
     public function __construct()
     {
         $this->middleware('can:admin.users.index')->only('index');
-        $this->middleware('can:admin.users.edit')->only('edit, update');
+        $this->middleware('can:admin.users.edit')->only('edit');
     }
 
     public function index()
@@ -33,10 +33,9 @@ class UserController extends Controller
         return redirect()->route('admin.users.edit', $user)->with('info', 'Se asignaron los roles correctamente');
     }
 
-    public function destroy(User $user) {
-
+    public function destroy(User $user)
+    {
         $user->delete();
         return redirect()->route('admin.users.index')->with('info', 'Se ha borrado el usuario correctamente');
-
     }
 }

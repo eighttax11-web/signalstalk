@@ -50,7 +50,7 @@ class UserController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors()->toJson(), 400);
+            return response()->json($validator->errors(), 400);
         }
 
         $user = User::create([
@@ -62,5 +62,27 @@ class UserController extends Controller
         $token = JWTAuth::fromUser($user);
 
         return response()->json(compact('user', 'token'), 201);
+    }
+
+    public function list(): \Illuminate\Http\JsonResponse
+    {
+        $users = User::all();
+
+        return response()->json($users);
+    }
+
+    public function search($search)
+    {
+        $user = User::where('name', 'like', '%' . $search . '%')->get();
+        return response()->json($user);
+    }
+
+    public function delete($id)
+    {
+        $user = User::where('id', '=', $id);
+
+        $user->delete();
+
+        return response()->json(null, 204);
     }
 }
